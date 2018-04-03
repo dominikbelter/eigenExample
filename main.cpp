@@ -25,9 +25,15 @@ int main()
         std::cout << "Doing a += b;" << std::endl;
         A += B;
         std::cout << "Now a =\n" << A << std::endl;
+        // access a single element
+        std::cout << "A(0,0)=\n" << A(0,0) << "\n\n";
+        // access a block
+        std::cout << "A(0,:)=\n" << A.block<2,1>(0,0) << "\n\n";
+
         Vector3d v(1,2,3);
         Vector3d w(1,0,0);
         std::cout << "-v + w - v =\n" << -v + w - v << std::endl;
+
 
         getchar();
     }
